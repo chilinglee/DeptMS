@@ -5,6 +5,7 @@ using DeptMS.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -41,7 +42,15 @@ namespace DeptMS.Controllers
         
         public ActionResult Update(string id)
         {
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             DepartmentViewModel dept = _deService.GetById(id);
+            if(dept == null)
+            {
+                return HttpNotFound();
+            }
             return View(dept);
         }
         [HttpPost]
@@ -56,8 +65,20 @@ namespace DeptMS.Controllers
         }
         public ActionResult Delete(string id)
         {
-            _deService.DeleteById(id);
-            return RedirectToAction("Read");
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            bool IsSuccess = _deService.DeleteById(id);
+            if (IsSuccess)
+            {
+                return RedirectToAction("Read");
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+            
         }
     }
 }

@@ -128,11 +128,20 @@ namespace DeptMS.Service
             };
             _repo.RevisedUpdate(newEntity, updateDept.OLD_DEPARTMENT_ID);
         }
-        public void DeleteById(string id)
+        public bool DeleteById(string id)
         {
-            View_Department item = _repo.GetAll<View_Department>().FirstOrDefault(x => x.DEPARTMENT_ID == id);
-            _repo.Delete(item);
-            _repo.SaveChanges();
+            try
+            {
+                View_Department item = _repo.GetAll<View_Department>().FirstOrDefault(x => x.DEPARTMENT_ID == id);
+                _repo.Delete(item);
+                _repo.SaveChanges();
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+            
         }
     }
 }
