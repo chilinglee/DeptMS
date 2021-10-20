@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DepartmentViewModel>
+@{
+    ViewBag.Title = "Read";
+}
+<link href="~/Assets/css/read.css" rel="stylesheet" />
+<h2>檢視資料</h2>
+<div class="myContainer">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>DEPARTMENT_ID</th>
+                <th>COMPANY_ID</th>
+                <th>DEPARTMENT_CODE</th>
+                <th>DEPARTMENT_CNAME</th>
+                <th>DEPARTMENT_ENAME</th>
+                <th>DEPARTMENT_ABBR</th>
+                <th>PART_DEPARTMENT_ID</th>
+                <th>DEPARTMENT_LEADER_ID</th>
+                <th>GL_DEPARTMENT_CODE</th>
+                <th>DEPT_LEVEL_CODE</th>
+                <th>DEPT_LEVEL_CNAME</th>
+                <th>DEPT_LEVEL_LEVEL</th>
+                <th>ACTIVATE_DATE</th>
+                <th>EXPIRED_DATE</th>
+                <th>MODIFIED_DATE</th>
+                <th>DEPT_LEADER_NO</th>
+                <th>EMPLOYEE_EMAIL_1</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="d-flex"><a class="btn btn-secondary mx-1" href="/Department/Update/@item.DEPARTMENT_ID">更新資料</a><a class="btn btn-danger mx-1" href="/Department/Delete/@item.DEPARTMENT_ID">刪除資料</a></td>
+                    <td>@item.DEPARTMENT_ID</td>
+                    <td>@item.COMPANY_ID</td>
+                    <td>@item.DEPARTMENT_CODE</td>
+                    <td>@item.DEPARTMENT_CNAME</td>
+                    <td>@item.DEPARTMENT_ENAME</td>
+                    <td>@item.DEPARTMENT_ABBR</td>
+                    <td>@item.PART_DEPARTMENT_ID</td>
+                    <td>@item.DEPARTMENT_LEADER_ID</td>
+                    <td>@item.GL_DEPARTMENT_CODE</td>
+                    <td>@item.DEPT_LEVEL_CODE</td>
+                    <td>@item.DEPT_LEVEL_CNAME</td>
+                    <td>@item.DEPT_LEVEL_LEVEL</td>
+                    <td>@item.ACTIVATE_DATE</td>
+                    <td>@item.EXPIRED_DATE</td>
+                    <td>@item.MODIFIED_DATE</td>
+                    <td>@item.DEPT_LEADER_NO</td>
+                    <td>@item.EMPLOYEE_EMAIL_1</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<a class="btn btn-warning mt-3" href="/Department/Create">新增資料</a>

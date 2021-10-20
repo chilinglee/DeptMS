@@ -1,0 +1,107 @@
+﻿@model DepartmentViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 class="pl-5 mb-3">新增資料</h2>
+<form method="post" action="/Department/Create">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="container">
+        <div class="form-group">
+            <label for="department_id">DEPARTMENT_ID</label>
+            <input type="text" name="DEPARTMENT_ID" id="department_id" class="form-control" />
+            @Html.ValidationMessageFor(model => model.DEPARTMENT_ID, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="company_id">COMPANY_ID</label>
+            <input type="text" name="COMPANY_ID" id="company_id" class="form-control" />
+            @Html.ValidationMessageFor(model => model.COMPANY_ID, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="department_code">DEPARTMENT_CODE</label>
+            <input type="text" name="DEPARTMENT_CODE" id="department_code" class="form-control" />
+            @Html.ValidationMessageFor(model => model.DEPARTMENT_CODE, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="department_cname">DEPARTMENT_CNAME</label>
+            <input type="text" name="DEPARTMENT_CNAME" id="department_cname" class="form-control" />
+            @Html.ValidationMessageFor(model => model.DEPARTMENT_CNAME, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="department_ename">DEPARTMENT_ENAME</label>
+            <input type="text" name="DEPARTMENT_ENAME" id="department_ename" class="form-control" />
+            @Html.ValidationMessageFor(model => model.DEPARTMENT_ENAME, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="department_abbr">DEPARTMENT_ABBR</label>
+            <input type="text" name="DEPARTMENT_ABBR" id="department_abbr" class="form-control" />
+            @Html.ValidationMessageFor(model => model.DEPARTMENT_ABBR, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="part_department_id">PART_DEPARTMENT_ID</label>
+            <input type="text" name="PART_DEPARTMENT_ID" id="part_department_id" class="form-control" />
+            @Html.ValidationMessageFor(model => model.PART_DEPARTMENT_ID, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="department_leader_id">DEPARTMENT_LEADER_ID</label>
+            <input type="text" name="DEPARTMENT_LEADER_ID" id="department_leader_id" class="form-control" />
+            @Html.ValidationMessageFor(model => model.DEPARTMENT_LEADER_ID, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="gl_department_code">GL_DEPARTMENT_CODE</label>
+            <input type="text" name="GL_DEPARTMENT_CODE" id="gl_department_code" class="form-control" />
+            @Html.ValidationMessageFor(model => model.GL_DEPARTMENT_CODE, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="department_status">DEPARTMENT_STATUS</label>
+            <input type="text" name="DEPARTMENT_STATUS" id="department_status" class="form-control" />
+            @Html.ValidationMessageFor(model => model.DEPARTMENT_STATUS, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="dept_level_code">DEPT_LEVEL_CODE</label>
+            <input type="text" name="DEPT_LEVEL_CODE" id="dept_level_code" class="form-control" />
+            @Html.ValidationMessageFor(model => model.DEPT_LEVEL_CODE, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="dept_level_cname">DEPT_LEVEL_CNAME</label>
+            <input type="text" name="DEPT_LEVEL_CNAME" id="dept_level_cname" class="form-control" />
+            @Html.ValidationMessageFor(model => model.DEPT_LEVEL_CNAME, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="dept_level_level">DEPT_LEVEL_LEVEL</label>
+            <input type="text" name="DEPT_LEVEL_LEVEL" id="dept_level_level" class="form-control" />
+            @Html.ValidationMessageFor(model => model.DEPT_LEVEL_LEVEL, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="active_date">ACTIVATE_DATE</label>
+            <input type="date" name="ACTIVATE_DATE" id="active_date" class="form-control" />
+            @Html.ValidationMessageFor(model => model.ACTIVATE_DATE, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="expired_date">EXPIRED_DATE</label>
+            <input type="date" name="EXPIRED_DATE" id="expired_date" class="form-control" />
+            @Html.ValidationMessageFor(model => model.EXPIRED_DATE, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="modified_date">MODIFIED_DATE</label>
+            <input type="date" name="MODIFIED_DATE" id="modified_date" class="form-control" />
+            @Html.ValidationMessageFor(model => model.MODIFIED_DATE, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="dept_leader_no">DEPT_LEADER_NO</label>
+            <input type="text" name="DEPT_LEADER_NO" id="dept_leader_no" class="form-control" />
+            @Html.ValidationMessageFor(model => model.DEPT_LEADER_NO, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="employee_email_1">EMPLOYEE_EMAIL_1</label>
+            <input type="text" name="EMPLOYEE_EMAIL_1" id="employee_email_1" class="form-control" />
+            @Html.ValidationMessageFor(model => model.EMPLOYEE_EMAIL_1, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <div class="col-12">
+                <input type="submit" value="新增資料" class="btn btn-success m-2" />
+            </div>
+        </div>
+    </div>
+    
+</form>
