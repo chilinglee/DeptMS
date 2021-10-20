@@ -128,7 +128,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\View_DepartmentController.cs" />
     <Compile Include="Data\DeptMSContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -197,11 +196,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\View_Department\Create.cshtml" />
-    <Content Include="Views\View_Department\Delete.cshtml" />
-    <Content Include="Views\View_Department\Details.cshtml" />
-    <Content Include="Views\View_Department\Edit.cshtml" />
-    <Content Include="Views\View_Department\Index.cshtml" />
     <Content Include="Views\Department\Read.cshtml" />
     <Content Include="Views\Department\Create.cshtml" />
     <Content Include="Views\Department\Update.cshtml" />
